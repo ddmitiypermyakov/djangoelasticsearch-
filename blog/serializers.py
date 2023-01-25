@@ -15,6 +15,6 @@ class CategorySerializer(serializers.ModelSerializer):
 class ArticleSerializer(serializers.ModelSerializer):
     author = UserSerializer()
     categories = CategorySerializer(many=True)
-class Meta:
-        model = Article
-        fields = '__all__'
+    class Meta:
+            model = Article
+            fields = '__all__'
